@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+
+
+
+
+
+
+
+/* ... (اترك الأكواد السابقة كما هي وأضف هذا في النهاية) ... */
+
+@media print {
+  /* 1. إخفاء القوائم، التذييل، والشرائط الجانبية */
+  nav, footer, aside, header {
+    display: none !important;
+  }
+
+  /* 2. إخفاء أي عنصر يحمل هذا الكلاس */
+  .no-print {
+    display: none !important;
+  }
+
+  /* 3. إلغاء هوامش المتصفح الافتراضية لتملأ الشهادة الورقة */
+  @page {
+    margin: 0;
+    size: auto;
+  }
+
+  /* 4. ضمان أن الخلفية بيضاء تماماً */
+  body {
+    background-color: white !important;
+    background-image: none !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* 5. ضمان ظهور الشهادة بمقاس صحيح */
+  .certificate-container {
+    width: 100% !important;
+    height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
